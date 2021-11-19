@@ -75,12 +75,12 @@ dmesg | grep -i e1000
 sudo update-initramfs -u
 ```
 
-## 好きなIPを設定する
+## IPを設定する
 
 1. UbuntuのSettingからNetworkを選択
 2. Ethernetから未使用の場所を選択
 3. 歯車マーク→IPv4を選択
-4. Manualにチェックをし「Address」に好きなIP（例）192.168.10.20　「Netmask」に255.255.255.0（固定？）、「Gateway」（例）192.168.10.1 を設定
+4. Manualにチェックをし「Address」に好きなIP（例）192.168.10.20　「Netmask」に255.255.255.0（固定？）、「Gateway」（例）192.168.10.1（Addressの末尾を1にするだけ？） を設定
 5. Applyする
 
 
@@ -88,4 +88,9 @@ sudo update-initramfs -u
 
 ## コマンドラインでUbuntuを固定IPにする
 
-1. 
+1. 設定ファイルを追加
+/etc/netplan/99_config.yaml というファイルを新規作成し、その中に以下の内容を書き込みます。
+
+```
+
+```
