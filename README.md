@@ -52,3 +52,19 @@ s32 e1000e_validate_nvm_checksum_generic(struct e1000_hw *hw)
         return 0;
 } 
 ```
+
+5. ビルドする
+```
+sudo make install
+```
+
+6. カーネルモジュール追加
+```
+sudo modprobe -r e1000e
+sudo modprobe e1000e
+```
+
+7. ログを確認
+```
+dmesg | grep -i e1000
+```
