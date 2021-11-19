@@ -212,7 +212,7 @@ ip a
 
 ```
 
-自分が指定したインターフェース名 (上記の例だと enp7s0f1)とIPアドレスになっていればok
+自分が指定したインターフェース名とIPアドレスになっていればok
 
 ### 参考文献
 https://qiita.com/noraworld/items/3e232fb7a25ed16c6a63
