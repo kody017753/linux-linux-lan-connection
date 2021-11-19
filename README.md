@@ -20,7 +20,7 @@ lspci | grep Ethernet
 4. このままビルドしても、Checksum エラーで引っかかります。ソースコード ./e1000e-3.8.4/src/nvm.c を一部修正
 
 before:
-’’’
+```
 s32 e1000e_validate_nvm_checksum_generic(struct e1000_hw *hw)
 {
         s32 ret_val;
@@ -43,4 +43,4 @@ s32 e1000e_validate_nvm_checksum_generic(struct e1000_hw *hw)
 
         return 0;
 }
-’’’
+```
