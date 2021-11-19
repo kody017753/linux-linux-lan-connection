@@ -168,8 +168,9 @@ network:
       addresses:
         - 192.168.10.20/24
       gateway4: 192.168.10.1
-      nameservers:
-          addresses: [8.8.8.8, 8.8.4.4]
+      nameservers: 　#なくても可
+          addresses: [8.8.8.8, 8.8.4.4]　　#なくても可
+          
 ```
 
 ### 適用
