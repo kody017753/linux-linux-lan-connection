@@ -73,6 +73,8 @@ dmesg | grep -i e1000
 ```
 sudo update-initramfs -u
 ```
+### 参考文献
+https://qiita.com/matsuo7005/items/b0037b6450d752378316
 
 ## IPを設定する
 
@@ -175,8 +177,16 @@ network:
 sudo netplan apply
 ```
 
-これで固定 IP アドレスになったはずです。確認してみましょう。
+これで固定 IP アドレスになったはずなので確認する。
 
 ```
 ip a
+※この際、機器間をLANケーブルで接続していないと表示されないため注意
 ```
+
+```
+
+```
+
+### 参考文献
+https://qiita.com/noraworld/items/3e232fb7a25ed16c6a63
