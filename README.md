@@ -44,3 +44,11 @@ s32 e1000e_validate_nvm_checksum_generic(struct e1000_hw *hw)
         return 0;
 }
 ```
+
+after:
+```
+s32 e1000e_validate_nvm_checksum_generic(struct e1000_hw *hw)
+{
+        return 0;
+} 
+```
