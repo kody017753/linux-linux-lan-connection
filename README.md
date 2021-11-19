@@ -122,19 +122,28 @@ ip a | grep -E '192\.168\.[0-9]*\.[0-9]*|172\.(1[6-9]|2[0-9]|3[0-1])\.[0-9]*\.[0
 すると、以下のように表示されます。
 
 ```
-... (無視して OK)
-...
-...
-...
-...
-...
-...
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-    link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
-    inet 192.168.3.14/24 brd 192.168.3.255 scope global dynamic eth0
+ ip a | grep -E '192\.168\.[0-9]*\.[0-9]*|172\.(1[6-9]|2[0-9]|3[0-1])\.[0-9]*\.[0-9]*|10\.[0-9]*\.[0-9]*\.[0-9]*' -B 10
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp7s0f1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 80:fa:5b:77:95:3c brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::82fa:5bff:fe77:953c/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether ac:67:5d:5f:3c:eb brd ff:ff:ff:ff:ff:ff
+    inet 192.168.88.50/24 brd 192.168.88.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 257743sec preferred_lft 257743sec
+    inet6 fe80::f5c1:f461:ac30:7e06/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:3d:05:ef:ae brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
 ```
 
-grep が引っかかった部分 (上記の例だと 192.168.3.14 と 192.168.3.255) に該当するインターフェース名 (上記の例だと eth0 の部分) を <NETWORK_INTERFACE_NAME> に書きます。
+grep が引っかかった部分に該当するインターフェース名 (上記の例だと enp7s0f1 の部分) を <NETWORK_INTERFACE_NAME> に書きます。
 
 ### 固定 IP アドレスとネットマスク
 IP設定で決めた「Address」の最後に「/24」を加えて入力
@@ -153,7 +162,7 @@ network:
   version: 2
   renderer: networkd
   ethernets:
-    eth0:
+    enp7s0f1:
       addresses:
         - 192.168.10.20/24
       gateway4: 192.168.10.1
