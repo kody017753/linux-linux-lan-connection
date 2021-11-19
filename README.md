@@ -68,3 +68,9 @@ sudo modprobe e1000e
 ```
 dmesg | grep -i e1000
 ```
+
+8.
+このままPCを再起動すると、古いドライバが読み込まれてしまうので、新しいドライバが読み込まれるように固定化
+```
+sudo update-initramfs -u
+```
