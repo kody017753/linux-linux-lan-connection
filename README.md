@@ -191,7 +191,7 @@ ip a
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
-2: enp7s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+2: <span style="color: red; ">enp7s0f1enp7s0f1</span>: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
     link/ether 80:fa:5b:77:95:3c brd ff:ff:ff:ff:ff:ff
     inet 192.168.10.20/24 brd 192.168.10.255 scope global enp7s0f1
        valid_lft forever preferred_lft forever
