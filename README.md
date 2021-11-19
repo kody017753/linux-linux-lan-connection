@@ -210,7 +210,7 @@ ip a
 
 ```
 
-インターフェース名 (上記の例だと enp7s0f1 の部分)
+自分が指定したインターフェース名 (上記の例だと enp7s0f1)とIPアドレスになっていればok
 
 ### 参考文献
 https://qiita.com/noraworld/items/3e232fb7a25ed16c6a63
