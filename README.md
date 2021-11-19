@@ -89,7 +89,7 @@ sudo update-initramfs -u
 ## IPを設定したPCとは別のPCにコマンドラインでUbuntuを固定IPにする
 
 1. 設定ファイルを追加
-/etc/netplan/01-network-manager-all.yaml というファイルの中に以下の内容を書き込む。(.yaml)
+/etc/netplan/01-network-manager-all.yaml というファイルの中に以下の内容を書き込む。(.yamlファイルはOSによって？名前が変わるようだが.yamlファイルに書き込めればOK)
 
 ```bash
 network:
