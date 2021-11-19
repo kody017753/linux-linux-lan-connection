@@ -89,8 +89,18 @@ sudo update-initramfs -u
 ## コマンドラインでUbuntuを固定IPにする
 
 1. 設定ファイルを追加
-/etc/netplan/99_config.yaml というファイルを新規作成し、その中に以下の内容を書き込みます。
+/etc/netplan/99_config.yaml というファイルを新規作成し、その中に以下の内容を書き込む。
 
+```bash
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    <NETWORK_INTERFACE_NAME>:
+      addresses:
+        - <STATIC_IP_ADDR_WITH_NETMASK>
+      gateway4: <DEFAULT_GATEWAY>
+      nameservers:
+          addresses: [<DNS, DNS, ...>]
 ```
-
-```
+<> で囲まれている部分はそれぞれ以下の環境に置き換えます。
