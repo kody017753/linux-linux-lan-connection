@@ -76,19 +76,19 @@ sudo update-initramfs -u
 
 ## IPを設定する
 
-1. UbuntuのSettingからNetworkを選択
+1. LinuxのSettingからNetworkを選択
 2. Ethernetから未使用の場所を選択
 3. 歯車マーク→IPv4を選択
 4. Manualにチェックをし「Address」に好きなIP（例）192.168.10.20　「Netmask」に255.255.255.0（固定？）、「Gateway」（例）192.168.10.1（Addressの末尾を1にするだけ？） を設定
 5. Applyする
 
 
-
-
 ## IPを設定したPCとは別のPCにコマンドラインでUbuntuを固定IPにする
 
 1. 設定ファイルを追加
-/etc/netplan/01-network-manager-all.yaml というファイルの中に以下の内容を書き込む。(.yamlファイルはOSによって？名前が変わるようだが.yamlファイルに書き込めればOK)
+/etc/netplan/01-network-manager-all.yaml というファイルの中に以下の内容を書き込む。
+
+(.yamlファイルはOSによって？名前が変わるようだが.yamlファイルに書き込めればOK)
 
 ```bash
 network:
@@ -153,7 +153,7 @@ IP設定で決めた「Gateway」をそのまま入力
 ### DNS サーバ
 DNS サーバの IP アドレスをカンマ区切りで複数指定できます。
 
-よくわからない場合はとりあえず 8.8.8.8, 8.8.4.4 を指定しておけば Oｋ
+よくわからない場合はとりあえず 8.8.8.8, 8.8.4.4 を指定しておけば ok
 
 ### 完成例
 ```
