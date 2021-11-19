@@ -88,10 +88,11 @@ https://qiita.com/matsuo7005/items/b0037b6450d752378316
 
 ## IPを設定したPCとは別のPCにコマンドラインでUbuntuを固定IPにする
 
-1. 設定ファイルを追加
+1. 設定ファイルに追記
 /etc/netplan/01-network-manager-all.yaml というファイルの中に以下の内容を書き込む。
 
-(.yamlファイルはOSによって？名前が変わるようだが.yamlファイルに書き込めればOK)
+- .yamlファイルはOSによって？名前が変わるようだが.yamlファイルに書き込めればOK
+- 中身のものはコメント化しておく(デフォルト消すの怖い)
 
 ```bash
 network:
