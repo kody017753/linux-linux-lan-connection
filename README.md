@@ -82,8 +82,9 @@ https://qiita.com/matsuo7005/items/b0037b6450d752378316
 1. メインエッジのSettingからNetworkを選択
 2. Ethernetから未使用の場所を選択
 3. 歯車マーク→IPv4を選択
-4. Manualにチェックをし「Address」に好きなIP（例）192.168.10.20　「Netmask」に255.255.255.0（固定？）、「Gateway」（例）192.168.10.1（Addressの末尾を1にするだけ？） を設定
-5. Applyする
+4. Manualにチェックをし「Address」に好きなIP（例）192.168.10.20　「Netmask」に255.255.255.0（固定？）、
+5. 「Gateway」（例）192.168.10.1（Addressの末尾を1にするだけ？） を設定
+6. Applyする
 
 
 ## IPを設定したPCとは別のPCにコマンドラインでUbuntuを固定IPにする
