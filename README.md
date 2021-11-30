@@ -1,4 +1,4 @@
-# linux機間のLANケーブルを使用した接続と設定
+# メインエッジ〜linux機間のLANケーブルを使用した接続と設定
 
 ## ドライバのダウンロードとビルド 
 ※NIC(有線LAN)が認識されていないと思い実施した手順のため、必要ないかも？
@@ -79,7 +79,7 @@ https://qiita.com/matsuo7005/items/b0037b6450d752378316
 
 ## IPを設定する
 
-1. LinuxのSettingからNetworkを選択
+1. メインエッジのSettingからNetworkを選択
 2. Ethernetから未使用の場所を選択
 3. 歯車マーク→IPv4を選択
 4. Manualにチェックをし「Address」に好きなIP（例）192.168.10.20　「Netmask」に255.255.255.0（固定？）、「Gateway」（例）192.168.10.1（Addressの末尾を1にするだけ？） を設定
